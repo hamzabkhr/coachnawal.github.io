@@ -19,6 +19,7 @@ body {
 /* Navigation Bar Styles */
 .navbar {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
@@ -54,6 +55,7 @@ body {
 
 .nav-links {
     display: flex;
+    flex-direction: row-reverse;
     list-style: none;
     gap: 2rem;
 
@@ -174,12 +176,8 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     direction: rtl;
-    color: #F1F1F1 ;
-    text-shadow: 
-    -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000;
+    color: black;
+
 }
 
 .hero-subtitle {
@@ -190,8 +188,8 @@ body {
 
 .cta-button {
     display: inline-block;
-    background-color: #a53e16;
-    color: #ffffff;
+    color: #a53e16;
+    background-color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
@@ -209,8 +207,8 @@ body {
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-    color: #a53e16;
+    color: #fff;
+    background-color: #a53e16;
 }
 
 .service {
@@ -220,6 +218,90 @@ body {
     text-decoration: underline #a53e16;
     text-underline-offset: 15px;
 }
+/* Social Media Section */
+.social-section {
+    background-color: #f9f0ff;
+    padding: 3rem 5%;
+    text-align: center;
+    direction: rtl;
+}
+  
+.social-section .section-title {
+    color: #a53e16;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+  
+.social-section .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    background: #a53e16;
+}
+  
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+  
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    width: 80px;
+}
+  
+.social-icon i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+  
+  .social-icon span {
+    font-size: 0.9rem;
+}
+  
+  /* Social Media Colors */
+  .social-icon.linkedin i {
+    background-color: #0077b5;
+    color: white;
+  }
+  .social-icon.facebook i {
+    background-color: #3b5998;
+    color: white;
+  }
+  .social-icon.instagram i {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+  }
+  .social-icon.whatsapp i {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  /* Hover Effects */
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+  .social-icon:hover i {
+    transform: scale(1.1);
+  }
 
 /* Benefits Section Styles */
 .benefits {
@@ -300,7 +382,6 @@ body {
     .hero-image {
         width: 100%;
         margin-left: 0;
-        opacity: 40%;
     }
 
     .hero-content {
@@ -453,7 +534,7 @@ body {
 
     .hero {
         flex-direction: column;
-        height: 80vh;
+        height: 100vh;
         justify-content: center;
         align-items: center;
     }
@@ -461,6 +542,7 @@ body {
     .hero-image {
         width: 100%;
         margin-left: 0;
+        opacity: 30%;
     }
 
     .hero-content {
@@ -470,12 +552,7 @@ body {
     }
 
     .hero-content h1 {
-        font-size: 1.4rem;
-        text-shadow: 
-        -1px -1px 0 #000000,
-        1px -1px 0 #000000,
-        -1px 1px 0 #000000,
-        1px 1px 0 #000000;
+        font-size: 1.6rem;
     }
 
     .benefits {
@@ -487,7 +564,7 @@ body {
         max-width: 90%;
         margin-bottom: 2rem;
     }
-
+    
     /* Make dropdown menus toggleable on mobile */
     .dropdown {
         position: relative;
@@ -531,3 +608,16 @@ body {
       }
 
 }
+@media (max-width: 768px) {
+    .social-icons {
+      gap: 1rem;
+    }
+    .social-icon {
+      width: 70px;
+    }
+    .social-icon i {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
