@@ -30,7 +30,15 @@ body {
     margin: auto;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    height: 6rem;
+    height: 100px;
+}
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #a53e16;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -44,16 +52,11 @@ body {
     height: auto;
 }
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #8e44ad;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+
 }
 
 .nav-links a {
@@ -144,7 +147,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(142, 68, 173, 0.7), rgba(142, 68, 173, 0.1));
+    background: linear-gradient(to right, rgba(144, 70, 175, 0.7), rgba(142, 68, 173, 0.1));
     z-index: 1;
 }
 
@@ -171,6 +174,7 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     direction: rtl;
+    color: #F1F1F1 ;
 }
 
 .hero-subtitle {
@@ -202,6 +206,14 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     background-color: #fff;
     color: #a53e16;
+}
+
+.service {
+    text-align: center;
+    padding: 20px 40px;
+    margin: 40px;
+    text-decoration: underline #a53e16;
+    text-underline-offset: 15px;
 }
 
 /* Benefits Section Styles */
@@ -243,23 +255,273 @@ body {
     color: #666;
     line-height: 1.6;
 }
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+    .logo {
+        width: 40px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
     .nav-links {
-        gap: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
-    
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-content {
+        padding: 2rem 5%;
+        max-width: none;
+        text-align: center;
+    }
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
     }
-    
+
     .benefits {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .benefit-card {
-        max-width: 100%;
+        max-width: 90%;
+        margin-bottom: 2rem;
     }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .hero-image {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .hero-content {
+        max-width: 500px;
+    }
+
+    .benefits {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .benefit-card {
+        flex: 1;
+        max-width: 250px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-content {
+        padding: 2rem 5%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-card {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust navbar links and toggle button for mobile */
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-content {
+        padding: 2rem 5%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+        text-shadow: 
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+    }
+
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-card {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    /* Make dropdown menus toggleable on mobile */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none; /* Hide dropdown menu by default */
+        position: static; /* Avoid absolute positioning */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: none; /* Remove box shadow */
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    /* When the dropdown parent is clicked, show the menu */
+    .dropdown.active {
+        display: block; /* Show dropdown when active */
+    }
+    .dropdown-menu.active {
+        display: block;
+    }
+    .dropdown-menu li {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .dropdown-menu a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s;
+        overflow: hidden;
+    }
+
+    .dropdown-menu a:hover {
+        color: #a53e16;
+    }
+    .dropdown {
+        width: 100%;
+        text-align: center; /* RTL alignment */
+      }
+
 }
