@@ -11,29 +11,22 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="https://github.com/hamzabkhr/coachnawal.github.io/blob/main/logo.png?raw=true" alt="EmpowerHer Logo" class="logo">
-            <span class="logo-text"></span>
+            <img src="logo.png" alt="EmpowerHer Logo" class="logo">
         </div>
-        <ul class="nav-links">
+        <button class="navbar-toggle" id="navbarToggle">
+            <i class="fas fa-bars"></i> <!-- Font Awesome icon -->
+        </button>
+        <ul class="nav-links" id="navbarMenu">
             <li><a href="#">من أنا ؟</a></li>
             <li><a href="#">دورات </a></li>
             <li class="dropdown">
-                <a href="#">إستشارات <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
+                <a id="mainDrop" class="dropdown-toggle" href="#">إستشارات <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu" id="dropdown-menu">
                     <li><a href="#">فردية</a></li>
                     <li><a href="#">جماعية</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#">كتب<i class="fas fa-chevron-down"></i></a>
-                <!--
-                                <ul class="dropdown-menu">
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Free Tools</a></li>
-                </ul>
-                -->
-
-            </li>
+            <li><a href="#">كتب</a></li>
             <li><a href="#">تواصل</a></li>
         </ul>
     </nav>
@@ -42,7 +35,7 @@
     <section class="hero">
         <div class="hero-image-container">
             <div class="image-overlay"></div>
-            <img src="https://github.com/hamzabkhr/coachnawal.github.io/blob/main/img.png?raw=true" alt="Confident woman smiling" class="hero-image">
+            <img src="img.png" alt="Coach" class="hero-image">
         </div>
         <div class="hero-content">
             <h1>استشارية في الأسرة والعلاقات الزوجية</h1>
@@ -53,6 +46,7 @@
     </section>
 
     <!-- Three Text Elements Section -->
+    <h1 class="service">خدماتنا لكِ</h1>
     <section class="benefits">
         <div class="benefit-card">
             <i class="fas fa-heart benefit-icon"></i>
@@ -70,5 +64,7 @@
             <p>أن تتخذ قراراتك بثقة، وتتجاوز مخاوفك، وتواجه التحديات بثبات القيادي</p>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
